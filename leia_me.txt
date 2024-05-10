@@ -1,2 +1,1 @@
-﻿com o g++ e o make e demais programas instalados 
-digite "make" neste diretório 
+﻿Com o g++ make e outros programas instalados, e com todos os arquivos no mesmo diretório, basta digitar "make" neste diretório. Para executar uma regra específica, você pode digitar "make" seguido pelo nome da regra, por exemplo, "make cppcheck".
