@@ -6,7 +6,7 @@
 TEST_CASE( "Soluções Inválidas") {
     SECTION( "Teste 1") {
         int result = solve8QueensFromFile("tabuleiros/board1.txt");
-        REQUIRE(result == 1);
+        REQUIRE(result == -1);
     }
        
 }
