@@ -16,7 +16,9 @@ gcov: testa_rainhas.cpp   rainhas.cpp rainhas.hpp
 	g++ -std=c++11 -Wall -Wall -fprofile-arcs -ftest-coverage -c rainhas.cpp
 	g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage rainhas.o testa_rainhas.cpp -o testa_rainhas
 	./testa_rainhas
-	gcov *.cpp	
+	gcov *.cpp
+	mkdir -p cgcov
+	mv *.gcov *.gcda *.gcno cgcov	
 	
 debug: testa_rainhas.cpp   rainhas.cpp rainhas.hpp 
 	g++ -std=c++11 -Wall -Wall -g -c rainhas.cpp
