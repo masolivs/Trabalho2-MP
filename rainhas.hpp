@@ -1,3 +1,4 @@
+// Copyright 2024 <Mariana Oliveira>
 #ifndef RAINHAS_HPP
 #define RAINHAS_HPP
 
@@ -12,6 +13,4 @@ bool solveQueens(std::vector<std::string>& board, int row);
 int solve8Queens(const std::string& board_str);
 int solve8QueensFromFile(const std::string& filename);
 
-#endif // RAINHAS_HPP
-
- 
+#endif // RAINHAS_HPP_
