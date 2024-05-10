@@ -3,12 +3,12 @@
 #include "rainhas.hpp"
 
 
-TEST_CASE( "Numeros romanos - algarismos �nicos", "[romanos]" ) {
-    REQUIRE( romanos_para_decimal("I") == 1 );
-    
-    REQUIRE( romanos_para_decimal("V") == 5 );
-
-    
+TEST_CASE( "Soluções Inválidas") {
+    SECTION( "Teste 1") {
+        int result = solve8QueensFromFile("tabuleiros/board1.txt");
+        REQUIRE(result == 1);
+    }
+       
 }
 
  
