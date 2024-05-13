@@ -45,3 +45,9 @@ TEST_CASE( "Soluções Inválidas") {
         REQUIRE(result == -1);
     }
 }
+TEST_CASE( "Soluções Válidas - É solução do problema") {
+    SECTION( "Teste 11") {
+        int result = solve8QueensFromFile("tabuleiros/board11.txt");
+        REQUIRE(result == 1);
+    }
+}
