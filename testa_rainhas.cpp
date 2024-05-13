@@ -87,3 +87,9 @@ TEST_CASE( "Soluções Válidas - É solução do problema") {
         REQUIRE(result == 1);
     }
 }
+TEST_CASE( "Soluções Válidas - Não é solução do problema") {
+    SECTION( "Teste 21") {
+        int result = solve8QueensFromFile("tabuleiros/board21.txt");
+        REQUIRE(result == 0);
+    }
+}
