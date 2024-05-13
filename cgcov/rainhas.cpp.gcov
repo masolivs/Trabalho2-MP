@@ -8,24 +8,24 @@
         -:    7:#include <sstream>
         -:    8:#include <algorithm> 
         -:    9:
-        1:   10:bool isValidInput(const std::string& board_str) {
-        1:   11:    std::vector<std::string> rows;
-        1:   12:    std::string row;
-        1:   13:    std::istringstream iss(board_str);
-        9:   14:    while (std::getline(iss, row)) {
-       8*:   15:        if (row.size() != 8) return false;
-        8:   16:        rows.push_back(row);
+        2:   10:bool isValidInput(const std::string& board_str) {
+        2:   11:    std::vector<std::string> rows;
+        2:   12:    std::string row;
+        2:   13:    std::istringstream iss(board_str);
+       18:   14:    while (std::getline(iss, row)) {
+      16*:   15:        if (row.size() != 8) return false;
+       16:   16:        rows.push_back(row);
         -:   17:    }
-       1*:   18:    if (rows.size() != 8) return false;
+       2*:   18:    if (rows.size() != 8) return false;
         -:   19:
-        1:   20:    int queens_count = 0;
-        9:   21:    for (const auto& r : rows) {
-        8:   22:        queens_count += std::count(r.begin(), r.end(), '1');
+        2:   20:    int queens_count = 0;
+       18:   21:    for (const auto& r : rows) {
+       16:   22:        queens_count += std::count(r.begin(), r.end(), '1');
         -:   23:    }
-        1:   24:    if (queens_count != 8) return false;
+        2:   24:    if (queens_count != 8) return false;
         -:   25:
     #####:   26:    return true;
-        1:   27:}
+        2:   27:}
     #####:   28:bool isAttacking(const std::vector<std::string>& board, size_t row1, size_t col1, size_t row2, size_t col2) {
     #####:   29:    return row1 == row2 || col1 == col2 || std::abs(static_cast<int>(row1) - static_cast<int>(row2)) == std::abs(static_cast<int>(col1) - static_cast<int>(col2));
         -:   30:}
@@ -66,8 +66,8 @@
         -:   65:    }
     #####:   66:    return false;
         -:   67:}
-        1:   68:int solve8Queens(const std::string& board_str) {
-        1:   69:    if (!isValidInput(board_str)) return -1;
+        2:   68:int solve8Queens(const std::string& board_str) {
+        2:   69:    if (!isValidInput(board_str)) return -1;
         -:   70:
     #####:   71:    std::vector<std::string> board;
     #####:   72:    std::istringstream iss(board_str);
@@ -82,16 +82,16 @@
     #####:   81:        return 1;
         -:   82:    }
     #####:   83:}
-        1:   84:int solve8QueensFromFile(const std::string& filename) {
-        1:   85:    std::ifstream infile(filename);
-        1:   86:    if (!infile.is_open()) {
+        2:   84:int solve8QueensFromFile(const std::string& filename) {
+        2:   85:    std::ifstream infile(filename);
+        2:   86:    if (!infile.is_open()) {
     #####:   87:        return -1; // Retorna -1 se não conseguir abrir o arquivo
         -:   88:    }
-        1:   89:    std::string board_str;
-        1:   90:    std::string line;
-        9:   91:    while (std::getline(infile, line)) {
-        8:   92:        board_str += line + "\n";
+        2:   89:    std::string board_str;
+        2:   90:    std::string line;
+       18:   91:    while (std::getline(infile, line)) {
+       16:   92:        board_str += line + "\n";
         -:   93:    }
-        1:   94:    infile.close();
-        1:   95:    return solve8Queens(board_str);
-        1:   96:}
+        2:   94:    infile.close();
+        2:   95:    return solve8Queens(board_str);
+        2:   96:}

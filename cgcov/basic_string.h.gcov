@@ -6130,12 +6130,12 @@
         -: 6129:   */
         -: 6130:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6131:    inline basic_string<_CharT, _Traits, _Alloc>
-        8: 6132:    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+       16: 6132:    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6133:	      const _CharT* __rhs)
         -: 6134:    {
-        8: 6135:      basic_string<_CharT, _Traits, _Alloc> __str(__lhs);
-        8: 6136:      __str.append(__rhs);
-        8: 6137:      return __str;
+       16: 6135:      basic_string<_CharT, _Traits, _Alloc> __str(__lhs);
+       16: 6136:      __str.append(__rhs);
+       16: 6137:      return __str;
     =====: 6138:    }
         -: 6139:
         -: 6140:  /**

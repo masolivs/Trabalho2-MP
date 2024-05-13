@@ -4057,7 +4057,7 @@
         -: 4056:  template<typename _InputIterator, typename _Tp>
         -: 4057:    _GLIBCXX20_CONSTEXPR
         -: 4058:    inline typename iterator_traits<_InputIterator>::difference_type
-        8: 4059:    count(_InputIterator __first, _InputIterator __last, const _Tp& __value)
+       16: 4059:    count(_InputIterator __first, _InputIterator __last, const _Tp& __value)
         -: 4060:    {
         -: 4061:      // concept requirements
         -: 4062:      __glibcxx_function_requires(_InputIteratorConcept<_InputIterator>)
@@ -4065,8 +4065,8 @@
         -: 4064:	    typename iterator_traits<_InputIterator>::value_type, _Tp>)
         -: 4065:      __glibcxx_requires_valid_range(__first, __last);
         -: 4066:
-        8: 4067:      return std::__count_if(__first, __last,
-        8: 4068:			     __gnu_cxx::__ops::__iter_equals_val(__value));
+       16: 4067:      return std::__count_if(__first, __last,
+       16: 4068:			     __gnu_cxx::__ops::__iter_equals_val(__value));
         -: 4069:    }
         -: 4070:
         -: 4071:  /**

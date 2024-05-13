@@ -228,14 +228,14 @@
         -:  227:  template<typename _Tp>
         -:  228:    _GLIBCXX14_CONSTEXPR
         -:  229:    inline const _Tp&
-      191:  230:    min(const _Tp& __a, const _Tp& __b)
+      201:  230:    min(const _Tp& __a, const _Tp& __b)
         -:  231:    {
         -:  232:      // concept requirements
         -:  233:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  234:      //return __b < __a ? __b : __a;
-      191:  235:      if (__b < __a)
+      201:  235:      if (__b < __a)
     #####:  236:	return __b;
-      191:  237:      return __a;
+      201:  237:      return __a;
         -:  238:    }
         -:  239:
         -:  240:  /**
@@ -252,14 +252,14 @@
         -:  251:  template<typename _Tp>
         -:  252:    _GLIBCXX14_CONSTEXPR
         -:  253:    inline const _Tp&
-       95:  254:    max(const _Tp& __a, const _Tp& __b)
+      100:  254:    max(const _Tp& __a, const _Tp& __b)
         -:  255:    {
         -:  256:      // concept requirements
         -:  257:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  258:      //return  __a < __b ? __b : __a;
-       95:  259:      if (__a < __b)
-       41:  260:	return __b;
-       54:  261:      return __a;
+      100:  259:      if (__a < __b)
+       42:  260:	return __b;
+       58:  261:      return __a;
         -:  262:    }
         -:  263:
         -:  264:  /**
@@ -311,9 +311,9 @@
         -:  310:  template<typename _Iterator>
         -:  311:    _GLIBCXX20_CONSTEXPR
         -:  312:    inline _Iterator
-      330:  313:    __niter_base(_Iterator __it)
+      354:  313:    __niter_base(_Iterator __it)
         -:  314:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-      330:  315:    { return __it; }
+      354:  315:    { return __it; }
         -:  316:
         -:  317:  template<typename _Ite, typename _Seq>
         -:  318:    _Ite
@@ -2119,13 +2119,13 @@
         -: 2118:  template<typename _InputIterator, typename _Predicate>
         -: 2119:    _GLIBCXX20_CONSTEXPR
         -: 2120:    typename iterator_traits<_InputIterator>::difference_type
-        8: 2121:    __count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+       16: 2121:    __count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
         -: 2122:    {
-        8: 2123:      typename iterator_traits<_InputIterator>::difference_type __n = 0;
-       72: 2124:      for (; __first != __last; ++__first)
-       64: 2125:	if (__pred(__first))
-    #####: 2126:	  ++__n;
-        8: 2127:      return __n;
+       16: 2123:      typename iterator_traits<_InputIterator>::difference_type __n = 0;
+      144: 2124:      for (; __first != __last; ++__first)
+      128: 2125:	if (__pred(__first))
+        4: 2126:	  ++__n;
+       16: 2127:      return __n;
         -: 2128:    }
         -: 2129:
         -: 2130:#if __cplusplus >= 201103L

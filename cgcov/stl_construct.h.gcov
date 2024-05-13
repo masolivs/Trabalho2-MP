@@ -144,25 +144,25 @@
         -:  143:   */
         -:  144:  template<typename _Tp>
         -:  145:    _GLIBCXX14_CONSTEXPR inline void
-     2051:  146:    _Destroy(_Tp* __pointer)
+     2059:  146:    _Destroy(_Tp* __pointer)
         -:  147:    {
         -:  148:#if __cplusplus > 201703L
         -:  149:      std::destroy_at(__pointer);
         -:  150:#else
-     2051:  151:      __pointer->~_Tp();
+     2059:  151:      __pointer->~_Tp();
         -:  152:#endif
-     2051:  153:    }
+     2059:  153:    }
         -:  154:
         -:  155:  template<bool>
         -:  156:    struct _Destroy_aux
         -:  157:    {
         -:  158:      template<typename _ForwardIterator>
         -:  159:	static _GLIBCXX20_CONSTEXPR void
-     1580:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+     1582:  160:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  161:	{
-     3631:  162:	  for (; __first != __last; ++__first)
-     2051:  163:	    std::_Destroy(std::__addressof(*__first));
-     1580:  164:	}
+     3641:  162:	  for (; __first != __last; ++__first)
+     2059:  163:	    std::_Destroy(std::__addressof(*__first));
+     1582:  164:	}
         -:  165:    };
         -:  166:
         -:  167:  template<>
@@ -180,7 +180,7 @@
         -:  179:   */
         -:  180:  template<typename _ForwardIterator>
         -:  181:    _GLIBCXX20_CONSTEXPR inline void
-     1580:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+     1582:  182:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  183:    {
         -:  184:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  185:                       _Value_type;
@@ -194,8 +194,8 @@
         -:  193:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  194:#endif
         -:  195:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-     1580:  196:	__destroy(__first, __last);
-     1580:  197:    }
+     1582:  196:	__destroy(__first, __last);
+     1582:  197:    }
         -:  198:
         -:  199:  template<bool>
         -:  200:    struct _Destroy_n_aux
