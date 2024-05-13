@@ -32,4 +32,8 @@ TEST_CASE( "Soluções Inválidas") {
         int result = solve8QueensFromFile("tabuleiros/board7.txt");
         REQUIRE(result == -1);
     }
+    SECTION( "Teste 8") {
+        int result = solve8QueensFromFile("tabuleiros/board8.txt");
+        REQUIRE(result == -1);
+    }
 }
