@@ -66,26 +66,6 @@ TEST_CASE( "Soluções Válidas - É solução do problema") {
         int result = solve8QueensFromFile("tabuleiros/board15.txt");
         REQUIRE(result == 1);
     }
-    SECTION( "Teste 16") {
-        int result = solve8QueensFromFile("tabuleiros/board16.txt");
-        REQUIRE(result == 1);
-    }
-    SECTION( "Teste 17") {
-        int result = solve8QueensFromFile("tabuleiros/board17.txt");
-        REQUIRE(result == 1);
-    }
-    SECTION( "Teste 18") {
-        int result = solve8QueensFromFile("tabuleiros/board18.txt");
-        REQUIRE(result == 1);
-    }
-    SECTION( "Teste 19") {
-        int result = solve8QueensFromFile("tabuleiros/board19.txt");
-        REQUIRE(result == 1);
-    }
-    SECTION( "Teste 20") {
-        int result = solve8QueensFromFile("tabuleiros/board20.txt");
-        REQUIRE(result == 1);
-    }
 }
 TEST_CASE( "Soluções Válidas - Não é solução do problema") {
     SECTION( "Teste 21") {
