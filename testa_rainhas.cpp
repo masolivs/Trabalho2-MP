@@ -92,4 +92,8 @@ TEST_CASE( "Soluções Válidas - Não é solução do problema") {
         int result = solve8QueensFromFile("tabuleiros/board26.txt");
         REQUIRE(result == 0);
     }
+    SECTION( "Teste 27") {
+        int result = solve8QueensFromFile("tabuleiros/board27.txt");
+        REQUIRE(result == 0);
+    }
 }
