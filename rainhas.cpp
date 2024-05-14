@@ -7,6 +7,12 @@
 #include <sstream>
 #include <algorithm> 
 
+/**
+ * @brief Verifica se a entrada fornecida representa um tabuleiro válido de 8 rainhas.
+ * 
+ * @param board_str A string que representa o tabuleiro.
+ * @return true se o tabuleiro é válido, false caso contrário.
+ */
 bool isValidInput(const std::string& board_str) {
     std::vector<std::string> rows;
     std::string row;
@@ -23,9 +29,25 @@ bool isValidInput(const std::string& board_str) {
     if (queens_count != 8) return false;
     return true;
 }
+/**
+ * @brief Verifica se duas rainhas estão atacando uma à outra.
+ * 
+ * @param board O tabuleiro de xadrez.
+ * @param row1 A linha da primeira rainha.
+ * @param col1 A coluna da primeira rainha.
+ * @param row2 A linha da segunda rainha.
+ * @param col2 A coluna da segunda rainha.
+ * @return true se as rainhas estão atacando uma à outra, false caso contrário.
+ */
 bool isAttacking(const std::vector<std::string>& board, size_t row1, size_t col1, size_t row2, size_t col2) {
     return row1 == row2 || col1 == col2 || std::abs(static_cast<int>(row1) - static_cast<int>(row2)) == std::abs(static_cast<int>(col1) - static_cast<int>(col2));
 }
+/**
+ * @brief Salva os movimentos de ataque das rainhas em um arquivo.
+ * 
+ * @param board O tabuleiro de xadrez.
+ * @param filename O nome do arquivo onde os movimentos de ataque serão salvos.
+ */
 void saveAttacks(const std::vector<std::string>& board, const std::string& filename) {
     std::ofstream outfile(filename);
     if (!outfile.is_open()) return;
@@ -60,6 +82,14 @@ void saveAttacks(const std::vector<std::string>& board, const std::string& filen
     }
     outfile.close();
 }
+/**
+ * @brief Verifica se é seguro colocar uma rainha em uma determinada posição.
+ * 
+ * @param board O tabuleiro de xadrez.
+ * @param row A linha onde a rainha será colocada.
+ * @param col A coluna onde a rainha será colocada.
+ * @return true se for seguro colocar a rainha nessa posição, false caso contrário.
+ */
 bool isSafe(const std::vector<std::string>& board, int row, int col) {
     for (int i = 0; i < 8; ++i) {
         if (i != col && board[row][i] == '1') {
@@ -93,6 +123,13 @@ bool isSafe(const std::vector<std::string>& board, int row, int col) {
     }
     return true;
 }
+/**
+ * @brief Resolve o problema das 8 rainhas.
+ * 
+ * @param board O tabuleiro de xadrez.
+ * @param row A linha atual.
+ * @return true se uma solução foi encontrada, false caso contrário.
+ */
 bool solveQueens(std::vector<std::string>& board, size_t row) {
     if (row >= board.size()) return true;
     bool queen_placed = false;
@@ -108,9 +145,15 @@ bool solveQueens(std::vector<std::string>& board, size_t row) {
 
     return false;
 }
+/**
+ * @brief Resolve o problema das 8 rainhas a partir de uma string representando o tabuleiro.
+ * 
+ * @param board_str A string representando o tabuleiro.
+ * @param filename O nome do arquivo onde os movimentos de ataque serão salvos.
+ * @return 0 se nenhuma solução foi encontrada, 1 se uma solução foi encontrada, -1 se houve um erro.
+ */
 int solve8Queens(const std::string& board_str, const std::string& filename) {
     if (!isValidInput(board_str)) return -1;
-
     std::vector<std::string> board;
     std::istringstream iss(board_str);
     std::string row;
@@ -124,6 +167,12 @@ int solve8Queens(const std::string& board_str, const std::string& filename) {
         return 1;
     }
 }
+/**
+ * @brief Resolve o problema das 8 rainhas a partir de um arquivo.
+ * 
+ * @param filename O nome do arquivo contendo o tabuleiro.
+ * @return 0 se nenhuma solução foi encontrada, 1 se uma solução foi encontrada, -1 se houve um erro ao abrir o arquivo.
+ */
 int solve8QueensFromFile(const std::string& filename) {
     std::ifstream infile(filename);
     if (!infile.is_open()) {
