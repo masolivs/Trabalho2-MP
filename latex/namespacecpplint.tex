@@ -1,6 +1,6 @@
-\doxysection{Refência do Namespace cpplint}
+\doxysection{cpplint Namespace Reference}
 \hypertarget{namespacecpplint}{}\label{namespacecpplint}\index{cpplint@{cpplint}}
-\doxysubsubsection*{Componentes}
+\doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classcpplint_1_1__BlockInfo}{\+\_\+\+Block\+Info}}
@@ -27,7 +27,7 @@ class \mbox{\hyperlink{classcpplint_1_1FileInfo}{File\+Info}}
 \item 
 class \mbox{\hyperlink{classcpplint_1_1NestingState}{Nesting\+State}}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Funções}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{namespacecpplint_a61ea7ddd7fa3d98dbe6f1252803dea0e}\label{namespacecpplint_a61ea7ddd7fa3d98dbe6f1252803dea0e} 
@@ -247,7 +247,7 @@ class \mbox{\hyperlink{classcpplint_1_1NestingState}{Nesting\+State}}
 \Hypertarget{namespacecpplint_acf4a1286bb0905ffa465d24881a5d2e7}\label{namespacecpplint_acf4a1286bb0905ffa465d24881a5d2e7} 
 {\bfseries main} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variáveis}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{namespacecpplint_aa354ba81f1673ed31f2c0d7ce1f05f5e}\label{namespacecpplint_aa354ba81f1673ed31f2c0d7ce1f05f5e} 
@@ -404,7 +404,7 @@ list {\bfseries \+\_\+re\+\_\+pattern\+\_\+templates} = \mbox{[}$\,$\mbox{]}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Descrição detalhada}
+\doxysubsection{Detailed Description}
 \begin{DoxyVerb}Does google-lint on c++ files.
 
 The goal of this script is to identify places in the code that *may*
@@ -419,7 +419,7 @@ same line, but it is far from perfect (in either direction).
 \end{DoxyVerb}
  
 
-\doxysubsection{Funções}
+\doxysubsection{Function Documentation}
 \Hypertarget{namespacecpplint_afddd2b6b8a5419d76312738b1b365bf9}\label{namespacecpplint_afddd2b6b8a5419d76312738b1b365bf9} 
 \index{cpplint@{cpplint}!\_AddFilters@{\_AddFilters}}
 \index{\_AddFilters@{\_AddFilters}!cpplint@{cpplint}}
@@ -1932,14 +1932,14 @@ Returns:
 \end{DoxyVerb}
  
 
-\doxysubsection{Variáveis}
+\doxysubsection{Variable Documentation}
 \Hypertarget{namespacecpplint_a81cd42cc4392c8b9176e76e09ac95abe}\label{namespacecpplint_a81cd42cc4392c8b9176e76e09ac95abe} 
 \index{cpplint@{cpplint}!\_ALT\_TOKEN\_REPLACEMENT@{\_ALT\_TOKEN\_REPLACEMENT}}
 \index{\_ALT\_TOKEN\_REPLACEMENT@{\_ALT\_TOKEN\_REPLACEMENT}!cpplint@{cpplint}}
 \doxysubsubsection{\texorpdfstring{\_ALT\_TOKEN\_REPLACEMENT}{\_ALT\_TOKEN\_REPLACEMENT}}
 {\footnotesize\ttfamily dict cpplint.\+\_\+\+ALT\+\_\+\+TOKEN\+\_\+\+REPLACEMENT\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ \{}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'and'}:\ \textcolor{stringliteral}{'\&\&'},}
@@ -1962,7 +1962,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_ALT\_TOKEN\_REPLACEMENT\_PATTERN}{\_ALT\_TOKEN\_REPLACEMENT\_PATTERN}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+ALT\+\_\+\+TOKEN\+\_\+\+REPLACEMENT\+\_\+\+PATTERN\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'[\ =()]('}\ +\ (\textcolor{stringliteral}{'|'}.join(\_ALT\_TOKEN\_REPLACEMENT.keys()))\ +\ \textcolor{stringliteral}{r')(?=[\ (]|\$)'})}
@@ -1974,7 +1974,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_CHECK\_MACROS}{\_CHECK\_MACROS}}
 {\footnotesize\ttfamily list cpplint.\+\_\+\+CHECK\+\_\+\+MACROS\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ [}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'DCHECK'},\ \textcolor{stringliteral}{'CHECK'},}
@@ -1989,7 +1989,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_DEFAULT\_C\_SUPPRESSED\_CATEGORIES}{\_DEFAULT\_C\_SUPPRESSED\_CATEGORIES}}
 {\footnotesize\ttfamily list cpplint.\+\_\+\+DEFAULT\+\_\+\+C\+\_\+\+SUPPRESSED\+\_\+\+CATEGORIES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ [}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'readability/casting'},}
@@ -2002,7 +2002,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_DEFAULT\_KERNEL\_SUPPRESSED\_CATEGORIES}{\_DEFAULT\_KERNEL\_SUPPRESSED\_CATEGORIES}}
 {\footnotesize\ttfamily list cpplint.\+\_\+\+DEFAULT\+\_\+\+KERNEL\+\_\+\+SUPPRESSED\+\_\+\+CATEGORIES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ [}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'whitespace/tab'},}
@@ -2015,7 +2015,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_HEADERS\_MAYBE\_TEMPLATES}{\_HEADERS\_MAYBE\_TEMPLATES}}
 {\footnotesize\ttfamily tuple cpplint.\+\_\+\+HEADERS\+\_\+\+MAYBE\+\_\+\+TEMPLATES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ (}
 \DoxyCodeLine{00002\ \ \ \ \ (\textcolor{stringliteral}{'<algorithm>'},\ (\textcolor{stringliteral}{'copy'},\ \textcolor{stringliteral}{'max'},\ \textcolor{stringliteral}{'min'},\ \textcolor{stringliteral}{'min\_element'},\ \textcolor{stringliteral}{'sort'},}
@@ -2031,7 +2031,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_LEGACY\_ERROR\_CATEGORIES}{\_LEGACY\_ERROR\_CATEGORIES}}
 {\footnotesize\ttfamily list cpplint.\+\_\+\+LEGACY\+\_\+\+ERROR\+\_\+\+CATEGORIES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ [}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{'readability/streams'},}
@@ -2045,7 +2045,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_MATCH\_ASM}{\_MATCH\_ASM}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+MATCH\+\_\+\+ASM\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(\textcolor{stringliteral}{r'\string^\(\backslash\)s*(?:asm|\_asm|\_\_asm|\_\_asm\_\_)'}}
 \DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'(?:\(\backslash\)s+(volatile|\_\_volatile\_\_))?'}}
@@ -2058,7 +2058,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_CLEANSE\_LINE\_C\_COMMENTS}{\_RE\_PATTERN\_CLEANSE\_LINE\_C\_COMMENTS}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+CLEANSE\+\_\+\+LINE\+\_\+\+C\+\_\+\+COMMENTS\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'(\(\backslash\)s*'}\ +\ \_RE\_PATTERN\_C\_COMMENTS\ +\ \textcolor{stringliteral}{r'\(\backslash\)s*\$|'}\ +}
@@ -2073,7 +2073,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_CLEANSE\_LINE\_ESCAPES}{\_RE\_PATTERN\_CLEANSE\_LINE\_ESCAPES}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+CLEANSE\+\_\+\+LINE\+\_\+\+ESCAPES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'\(\backslash\)\(\backslash\)([abfnrtv?"{}\(\backslash\)\(\backslash\)\(\backslash\)']|\(\backslash\)d+|x[0-\/9a-\/fA-\/F]+)'})}
@@ -2085,7 +2085,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_CONST\_REF\_PARAM}{\_RE\_PATTERN\_CONST\_REF\_PARAM}}
 {\footnotesize\ttfamily tuple cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+CONST\+\_\+\+REF\+\_\+\+PARAM\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ (}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'(?:.*\(\backslash\)s*\(\backslash\)bconst\(\backslash\)s*\&\(\backslash\)s*'}\ +\ \_RE\_PATTERN\_IDENT\ +}
@@ -2098,7 +2098,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_INVALID\_INCREMENT}{\_RE\_PATTERN\_INVALID\_INCREMENT}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+INVALID\+\_\+\+INCREMENT\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'\string^\(\backslash\)s*\(\backslash\)*\(\backslash\)w+(\(\backslash\)+\(\backslash\)+|-\/-\/);'})}
@@ -2110,7 +2110,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_REF\_PARAM}{\_RE\_PATTERN\_REF\_PARAM}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+REF\+\_\+\+PARAM\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'('}\ +\ \_RE\_PATTERN\_TYPE\ +\ \textcolor{stringliteral}{r'(?:\(\backslash\)s*(?:\(\backslash\)bconst\(\backslash\)b|[*]))*\(\backslash\)s*'}}
@@ -2123,7 +2123,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_REF\_STREAM\_PARAM}{\_RE\_PATTERN\_REF\_STREAM\_PARAM}}
 {\footnotesize\ttfamily tuple cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+REF\+\_\+\+STREAM\+\_\+\+PARAM\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ (}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'(?:.*stream\(\backslash\)s*\&\(\backslash\)s*'}\ +\ \_RE\_PATTERN\_IDENT\ +\ \textcolor{stringliteral}{r')'})}
@@ -2135,7 +2135,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_RE\_PATTERN\_TYPE}{\_RE\_PATTERN\_TYPE}}
 {\footnotesize\ttfamily tuple cpplint.\+\_\+\+RE\+\_\+\+PATTERN\+\_\+\+TYPE\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ (}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'(?:const\(\backslash\)s+)?(?:typename\(\backslash\)s+|class\(\backslash\)s+|struct\(\backslash\)s+|union\(\backslash\)s+|enum\(\backslash\)s+)?'}}
@@ -2150,7 +2150,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_SEARCH\_C\_FILE}{\_SEARCH\_C\_FILE}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+SEARCH\+\_\+\+C\+\_\+\+FILE\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(\textcolor{stringliteral}{r'\(\backslash\)b(?:LINT\_C\_FILE|'}}
 \DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'vim?:\(\backslash\)s*.*(\(\backslash\)s*|:)filetype=c(\(\backslash\)s*|:|\$))'})}
@@ -2162,7 +2162,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_THIRD\_PARTY\_HEADERS\_PATTERN}{\_THIRD\_PARTY\_HEADERS\_PATTERN}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+THIRD\+\_\+\+PARTY\+\_\+\+HEADERS\+\_\+\+PATTERN\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'\string^(?:[\string^/]*[A-\/Z][\string^/]*\(\backslash\).h|lua\(\backslash\).h|lauxlib\(\backslash\).h|lualib\(\backslash\).h)\$'})}
@@ -2174,7 +2174,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_THREADING\_LIST}{\_THREADING\_LIST}}
 {\footnotesize\ttfamily tuple cpplint.\+\_\+\+THREADING\+\_\+\+LIST\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ (}
 \DoxyCodeLine{00002\ \ \ \ \ (\textcolor{stringliteral}{'asctime('},\ \textcolor{stringliteral}{'asctime\_r('},\ \_UNSAFE\_FUNC\_PREFIX\ +\ \textcolor{stringliteral}{r'asctime\(\backslash\)([\string^)]+\(\backslash\))'}),}
@@ -2199,7 +2199,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{\_TYPES}{\_TYPES}}
 {\footnotesize\ttfamily cpplint.\+\_\+\+TYPES\hspace{0.3cm}{\ttfamily [protected]}}
 
-{\bfseries Valor inicial\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ =\ \ re.compile(}
 \DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{r'\string^(?:'}}

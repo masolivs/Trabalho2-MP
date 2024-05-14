@@ -1,9 +1,17 @@
 // Copyright 2024 <Mariana Oliveira>
-#define CATCH_CONFIG_MAIN  
-#include "./catch.hpp"
-#include "./rainhas.hpp"
-
+/**
+ * @file test_rainhas.cpp
+ * @brief Arquivo de teste para verificar as soluções do problema das 8 rainhas.
+ * Este arquivo contém casos de teste para verificar se as soluções encontradas para o problema das 8 rainhas são válidas ou inválidas.
+ */
+#define CATCH_CONFIG_MAIN  //Define a entrada principal do Catch2
+#include "./catch.hpp"     //Inclui a biblioteca Catch para testes unitários
+#include "./rainhas.hpp"   //Inclui o arquivo com as funções para resolver o problema das 8 rainhas
+/**
+ * @brief Testa as soluções inválidas do problema das 8 rainhas.
+ */
 TEST_CASE( "Soluções Inválidas") {
+    // Testes para verificar se as soluções são inválidas
     SECTION( "Teste 1") {
         int result = solve8QueensFromFile("tabuleiros/board1.txt");
         REQUIRE(result == -1);
@@ -49,7 +57,11 @@ TEST_CASE( "Soluções Inválidas") {
         REQUIRE(result == -1);
     }
 }
+/**
+ * @brief Testa as soluções válidas do problema das 8 rainhas que são soluções válidas.
+ */
 TEST_CASE( "Soluções Válidas - É solução do problema") {
+    //Testes para verificar se as soluções são válidas
     SECTION( "Teste 11") {
         int result = solve8QueensFromFile("tabuleiros/board11.txt");
         REQUIRE(result == 1);
@@ -75,7 +87,11 @@ TEST_CASE( "Soluções Válidas - É solução do problema") {
         REQUIRE(result == 1);
     }
 }
+/**
+ * @brief Testa as soluções válidas do problema das 8 rainhas que não são soluções válidas.
+ */
 TEST_CASE( "Soluções Válidas - Não é solução do problema") {
+    //Testes para verificar se as soluções não são válidas
     SECTION( "Teste 21") {
         int result = solve8QueensFromFile("tabuleiros/board21.txt");
         REQUIRE(result == 0);
